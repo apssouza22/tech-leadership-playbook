@@ -616,22 +616,20 @@
                                 <div class="fw-col-inner">
                                     <div class="fw-contact-form  contact-2">
                                         <div class="fw-row wrap-forms wrap-contact-forms wow rollIn animated contact-form animated" data-wow-offset="10" data-wow-duration="1.55s" style="visibility: visible; animation-duration: 1.55s; animation-name: rollIn;">
-                                            <form data-fw-form-id="fw_form" method="post" action="#" class="fw_form_fw_form" data-fw-ext-forms-type="contact-forms">
-                                                <input type="hidden" name="fwf" value="fw_form">
+                                            <form method="post" action="#" class="msg-form" >
                                                 <input type="hidden" id="_nonce_271fca0b2bb618b7f84815c4d944dab4" type="hidden" name="fw_ext_forms_form_type" value="contact-forms">
-                                                <input type="hidden" name="fw_ext_forms_form_id" value="contact-form-55a6ab032ee15">
                                                 <div class="fw-row"></div>
                                                 <div class="fw-row">
                                                     <div class="fw-col-xs-12 form-builder-item">
                                                         <div class="field-text">
-                                                            <input class="form-control" type="text" name="email_2952f76" placeholder="Your Email" value="" id="id-2" required="required">
+                                                            <input class="form-control" type="text" name="email" placeholder="Your Email" value="" id="id-2" required="required">
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="fw-row">
                                                     <div class="fw-col-xs-12 form-builder-item">
                                                         <div class="field-textarea">
-                                                            <textarea rows="5" class="form-control" name="textarea_efa479f" placeholder="Enter Your Message" id="id-3" required="required"></textarea>
+                                                            <textarea rows="5" class="form-control" name="message" placeholder="Enter Your Message" id="id-3" required="required"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -722,6 +720,59 @@
         </div>
     </div>
 </footer>
+<script type="text/javascript"  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "41yrh21bi448GfS6z",
+        });
+        const serviceId = "service_7jehsto";
+        const templateId = "template_3zg5spn";
+        document.querySelector('.sub-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            //  get fields from the form
+            const fields = event.target.elements;
+            const email = fields.email.value;
+            const fname = fields.fname?.value;
+            const lname = fields.lname?.value;
+            const name = `${fname} ${lname}`;
 
+            let templateParams = {
+                replay_to: email,
+                message: "Subscribe to get a preview",
+                from_name: name,
+            };
+            console.log(templateParams)
+            emailjs.send(serviceId, templateId, templateParams,{});
+        });
+
+        document.querySelector('.msg-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const fields = event.target.elements;
+            const email = fields.email.value;
+            const message = fields.message?.value;
+            const name = `Tech leadership contact`;
+            let templateParams = {
+                replay_to: email,
+                message: message,
+                from_name: name,
+            };
+            console.log(templateParams)
+            emailjs.send(serviceId, templateId, templateParams,{});
+        });
+    })();
+
+
+
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NGXDC6VXQH"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NGXDC6VXQH');
+</script>
 </body>
 </html>
