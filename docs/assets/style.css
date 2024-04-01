@@ -49,7 +49,7 @@ input, button, select, textarea {
 
 .btn {
     display: inline-block;
-    background: #1b5d7e;
+    background: #061237;
     border-radius: 64px;
     color: #fff;
     border: 1px solid #3498db;
@@ -228,7 +228,7 @@ input, button, select, textarea {
 }
 
 .btn.btn-default {
-    background-color: transparent
+    background-color: #3498DA
 }
 
 .btn-primary {
