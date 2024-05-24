@@ -1,0 +1,1 @@
+This is folder contains the website for the project. The website is hosted on GitHub Pages and can be accessed [here](https://techleadershipbook.com/).
