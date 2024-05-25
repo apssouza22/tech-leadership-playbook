@@ -49,17 +49,17 @@
             <ul id="menu-header" class="nav navbar-nav navbar-right">
                 <li id="menu-item-9" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-7 current_page_item menu-item-on active"><a title="Home" href="#home">Home</a></li>
                 <li id="menu-item-57" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-on"><a title="Features" href="#features">Features</a></li>
-                <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-on"><a title="Reviews" href="#reviews">Reviews</a></li>
+<!--                <li id="menu-item-91" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-on"><a title="Reviews" href="#reviews">Reviews</a></li>-->
                 <li id="menu-item-102" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-on"><a title="Subscribe" href="#subscribe">Subscribe</a></li>
                 <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-on"><a title="Pricing" href="#pricing">Pricing</a></li>
                 <li id="menu-item-138" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-on"><a title="Author" href="#author">Author</a></li>
                 <li id="menu-item-233" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-on"><a title="Contact" href="#contact">Contact</a></li>
-                <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item- dropdown"><a title="text" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">text <span class="caret"></span></a>
+<!--                <li id="menu-item-505" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item- dropdown"><a title="text" href="#" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true">text <span class="caret"></span></a>-->
                     <ul role="menu" class="dropdown-menu">
                         <li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-no"><a title="Elements" href="elements/">Elements</a></li>
                     </ul>
                 </li>
-                <li><a href="#" class="btn btn-primary hollow">Buy Now</a></li>
+<!--                <li><a href="#" class="btn btn-primary hollow">Buy Now</a></li>-->
             </ul>
         </div>
     </div>
@@ -69,14 +69,9 @@
 <div id="home" class="hero">
     <div class="fw-page-builder-content">
         <section id="section-66073d961c928" class="fw-main-row text-center section-spacing parallax-section  auto ">
-            <div style="background-color:rgba( 255, 255, 255, 0.9 )">
+            <div>
                 <div class="fw-container">
-                    <div class="hidden" id="is-intro" data-val="yes"></div>
-                    <div class="logo">
 
-                        <a href="https://xpeedstudio.com/wp/book/demo1"><img src="./assets/logo.png" alt="site name"> </a>
-
-                    </div>
                     <div class="fw-row">
                         <div id="column-66073d961c9f0" class=" fw-col-md-8       wow fadeInUp animated" data-wow-offset="120" data-wow-duration="1.5s" style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUp;">
                             <div class="fw-main-row">
@@ -88,9 +83,11 @@
                                         </div>
                                     </header>
                                     <div class="fw-divider-space space-sm"></div>
-                                    <div class="text-left btn-inline"><a href="#" target="_self" class="btn btn-primary btn-lg" title="Read More">
-                                        <i class="pull-right fa fa-arrow-right"></i> Read More </a>
-                                    </div>
+
+<!--                                    <div class="text-left btn-inline"><a href="#" target="_self" class="btn btn-primary btn-lg" title="Read More">-->
+<!--                                        <i class="pull-right fa fa-arrow-right"></i> Read More </a>-->
+<!--                                    </div>-->
+
                                     <div class="text-left btn-inline"><a href="#" target="_self" class="btn btn-default btn-lg buy-temp" title="Buy Now">
                                         <i class="pull-right fa fa-cart-arrow-down"></i> Buy Now </a>
                                     </div>
@@ -269,7 +266,7 @@
                                 <div class="fw-col-inner">
                                     <div class="funfacts-counter">
                                         <i class="fa-3x fa fa-file-text-o"></i>
-                                        <h3 class="total-number" data-total-count="170">170</h3>
+                                        <h3 class="total-number" data-total-count="210">210</h3>
                                         <p class="statistic-text">Total Pages</p>
                                     </div>
                                 </div>
@@ -324,7 +321,7 @@
                             <div class="fw-main-row">
                                 <div class="fw-col-inner">
                                     <div class="fw-single-image ">
-                                        <img src="./assets/alex-author.jpeg" class="img-responsive" alt="">
+                                        <img src="./assets/alex-author.png" class="img-responsive" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -792,6 +789,7 @@
             item.addEventListener('click', event => {
                 event.preventDefault();
                 alert("The book is not available for purchase at the moment. Please subscribe to get a preview and be notified when it is available for purchase.");
+                location.href = "#subscribe";
             });
         });
 
