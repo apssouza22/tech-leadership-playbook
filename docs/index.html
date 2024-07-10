@@ -27,6 +27,23 @@
     <link rel="stylesheet" id="fw-shortcode-testimonials-css" href="./assets/styles.css" type="text/css" media="all">
 
     <link rel="stylesheet" id="fw-ext-builder-frontend-grid-css" href="./assets/frontend-grid.css" type="text/css" media="all">
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '849546347063583');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+                   src="https://www.facebook.com/tr?id=849546347063583&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body class="home page-template page-template-one-page page-template-one-page-php page page-id-7 wallpaper-inititalized" data-new-gr-c-s-check-loaded="14.1165.0" data-gr-ext-installed="">
 
@@ -750,6 +767,7 @@
         const templateId = "template_3zg5spn";
         document.querySelector('.sub-form').addEventListener('submit', function (event) {
             event.preventDefault();
+            fbq('track', 'Subscribe');
             //  get fields from the form
             const fields = event.target.elements;
             const email = fields.email.value;
@@ -770,6 +788,7 @@
 
         document.querySelector('.msg-form').addEventListener('submit', function (event) {
             event.preventDefault();
+            fbq('track', 'Subscribe');
             const fields = event.target.elements;
             const email = fields.email.value;
             const message = fields.message?.value;
